@@ -194,7 +194,7 @@ public class AliyunPushPlugin implements FlutterPlugin, MethodCallHandler {
 			AliyunThirdPushUtils.registerVivoPush(application);
 			AliyunThirdPushUtils.registerOppoPush(application);
 			AliyunThirdPushUtils.registerMeizuPush(application);
-			AliyunThirdPushUtils.registerGCM(application);
+			// AliyunThirdPushUtils.registerGCM(application);
 			AliyunThirdPushUtils.registerHonorPush(application);
 
 			map.put(CODE_KEY, CODE_SUCCESS);
