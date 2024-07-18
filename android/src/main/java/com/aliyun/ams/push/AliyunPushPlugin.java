@@ -190,10 +190,10 @@ public class AliyunPushPlugin implements FlutterPlugin, MethodCallHandler {
 		if (context instanceof Application) {
 			Application application = (Application)context;
 			AliyunThirdPushUtils.registerHuaweiPush(application);
-			AliyunThirdPushUtils.registerXiaoMiPush(application);
-			AliyunThirdPushUtils.registerVivoPush(application);
-			AliyunThirdPushUtils.registerOppoPush(application);
-			AliyunThirdPushUtils.registerMeizuPush(application);
+			// AliyunThirdPushUtils.registerXiaoMiPush(application);
+			// AliyunThirdPushUtils.registerVivoPush(application);
+			// AliyunThirdPushUtils.registerOppoPush(application);
+			// AliyunThirdPushUtils.registerMeizuPush(application);
 			// AliyunThirdPushUtils.registerGCM(application);
 			AliyunThirdPushUtils.registerHonorPush(application);
 
