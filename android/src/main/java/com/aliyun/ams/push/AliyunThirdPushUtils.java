@@ -4,9 +4,9 @@ import com.alibaba.sdk.android.push.HonorRegister;
 import com.alibaba.sdk.android.push.huawei.HuaWeiRegister;
 // import com.alibaba.sdk.android.push.register.GcmRegister;
 // import com.alibaba.sdk.android.push.register.MeizuRegister;
-// import com.alibaba.sdk.android.push.register.MiPushRegister;
-// import com.alibaba.sdk.android.push.register.OppoRegister;
-// import com.alibaba.sdk.android.push.register.VivoRegister;
+import com.alibaba.sdk.android.push.register.MiPushRegister;
+import com.alibaba.sdk.android.push.register.OppoRegister;
+import com.alibaba.sdk.android.push.register.VivoRegister;
 
 import android.app.Application;
 import android.content.Context;
@@ -86,14 +86,14 @@ public class AliyunThirdPushUtils {
 		return getAppMetaDataWithId(context, "com.meizu.push.key");
 	}
 
-	// public static void registerOppoPush(Application application) {
-	// 	String oppoKey = getOppoPushKey(application);
-	// 	String oppoSecret = getOppoPushSecret(application);
+	 public static void registerOppoPush(Application application) {
+	 	String oppoKey = getOppoPushKey(application);
+	 	String oppoSecret = getOppoPushSecret(application);
 
-	// 	if (oppoKey != null && oppoSecret != null) {
-	// 		OppoRegister.register(application, oppoKey, oppoSecret);
-	// 	}
-	// }
+	 	if (oppoKey != null && oppoSecret != null) {
+	 		OppoRegister.register(application, oppoKey, oppoSecret);
+	 	}
+	 }
 
 	private static String getOppoPushKey(Context context) {
 		return getAppMetaDataWithId(context, "com.oppo.push.key");
@@ -103,14 +103,14 @@ public class AliyunThirdPushUtils {
 		return getAppMetaDataWithId(context, "com.oppo.push.secret");
 	}
 
-	// public static void registerXiaoMiPush(Application application) {
-	// 	String xiaoMiId = getXiaoMiId(application);
-	// 	String xiaoMiKey = getXiaoMiKey(application);
+	 public static void registerXiaoMiPush(Application application) {
+	 	String xiaoMiId = getXiaoMiId(application);
+	 	String xiaoMiKey = getXiaoMiKey(application);
 
-	// 	if (xiaoMiId != null && xiaoMiKey != null) {
-	// 		MiPushRegister.register(application, xiaoMiId, xiaoMiKey);
-	// 	}
-	// }
+	 	if (xiaoMiId != null && xiaoMiKey != null) {
+	 		MiPushRegister.register(application, xiaoMiId, xiaoMiKey);
+	 	}
+	 }
 
 	private static String getXiaoMiId(Context context) {
 		return getAppMetaDataWithId(context, "com.xiaomi.push.id");
@@ -120,13 +120,13 @@ public class AliyunThirdPushUtils {
 		return getAppMetaDataWithId(context, "com.xiaomi.push.key");
 	}
 
-	// public static  void registerVivoPush(Application application) {
-	// 	String vivoApiKey = getVivoApiKey(application);
-	// 	String vivoAppId = getVivoAppId(application);
-	// 	if (vivoApiKey != null && vivoAppId != null) {
-	// 		VivoRegister.register(application);
-	// 	}
-	// }
+	 public static  void registerVivoPush(Application application) {
+	 	String vivoApiKey = getVivoApiKey(application);
+	 	String vivoAppId = getVivoAppId(application);
+	 	if (vivoApiKey != null && vivoAppId != null) {
+	 		VivoRegister.register(application);
+	 	}
+	 }
 
 	private static String getVivoApiKey(Context context) {
 		return getAppMetaData(context, "com.vivo.push.api_key");
