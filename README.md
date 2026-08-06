@@ -210,15 +210,9 @@ public class MyMessageReceiver extends MessageReceiver {
 
 ### 3.2 iOS
 
-#### 3.2.1 Objc配置
+**iOS 端已移除阿里云推送 SDK，只保留空壳实现**：插件仍会注册，所有 API 在 iOS 上直接返回 `code = 10005`（不支持），不会抛 `MissingPluginException`。因此 iOS 无需任何证书、`-ObjC`、CloudPushSDK 相关配置。
 
-使用Xcode打开Flutter工程的iOS模块，需要做`-Objc`配置，即应用的TARGETS -> Build Settings -> Linking -> Other Linker Flags ，需添加上 -ObjC 这个属性，否则推送服务无法正常使用 。
-
-Other Linker Flags中设定链接器参数-ObjC，加载二进制文件时，会将 Objective-C 类和 Category 一并载入 ，若工程依赖多个三方库 ，将所有 Category 一并加载后可能发生冲突，可以使用 -force_load 单独载入指定二进制文件，配置如下 ：
-
-```c++
--force_load<framework_path>/CloudPushSDK.framework/CloudPushSDK
-```
+同时支持 Swift Package Manager 与 CocoaPods 两种集成方式，SPM 无需额外配置（需 Flutter 开启 `flutter config --enable-swift-package-manager`）。
 
 ## 四、APIs
 

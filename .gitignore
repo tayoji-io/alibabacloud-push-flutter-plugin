@@ -36,3 +36,5 @@ example/build/
 .idea/
 .vscode/
 
+
+.swiftpm/

@@ -45,3 +45,7 @@
 
 * 回调参数类型转换错误修复
 * Android 小米通道升级至3.8.6.1版本
+## 0.2.0
+
+* 移除iOS阿里云推送SDK，仅保留空壳实现（所有API在iOS返回不支持）
+* iOS支持Swift Package Manager集成，同时保留CocoaPods
